@@ -122,15 +122,15 @@ ceph-mon \
     --log-stderr-prefix=debug \
     --default-log-to-file=false \
     --default-mon-cluster-log-to-file=false \
-    --mon-host=$(ROOK_CEPH_MON_HOST) \
-    --mon-initial-members=$(ROOK_CEPH_MON_INITIAL_MEMBERS) \
+    --mon-host=$ROOK_CEPH_MON_HOST \
+    --mon-initial-members=$ROOK_CEPH_MON_INITIAL_MEMBERS \
     --id=b \
     --setuser=ceph \
     --setgroup=ceph \
     --foreground \
     --public-addr=10.100.13.242 \
     --setuser-match-path=/var/lib/ceph/mon/ceph-b/store.db \
-    --public-bind-addr=$(ROOK_POD_IP) \
+    --public-bind-addr=$ROOK_POD_IP \
     --extract-monmap=${monmap_path}
 
 # review the contents of the monmap
