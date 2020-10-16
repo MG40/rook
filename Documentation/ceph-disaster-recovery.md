@@ -92,7 +92,7 @@ ceph-mon \
     --public-bind-addr=$ROOK_POD_IP
 ```
 
-(be sure to remove the single quotes around the `--log-stderr-prefix` flag)
+(be sure to remove the single quotes around the `--log-stderr-prefix` flag and the paranthesis around the arguments for the values to take effect.)
 
 Patch the `rook-ceph-mon-b` Deployment to run a sleep instead of the `ceph mon` command:
 
